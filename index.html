@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz BTS SIO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Quiz BTS SIO</h1>
+    
+    <!-- Formulaire de demande de nom et prénom -->
+    <div id="user-info-form">
+      <p>Entrez votre nom et prénom pour commencer le quiz :</p>
+      <input type="text" id="first-name" placeholder="Prénom" required>
+      <input type="text" id="last-name" placeholder="Nom" required>
+      <button id="start-btn">Commencer le Quiz</button>
+    </div>
+
+    <!-- Contenu du quiz -->
+    <div id="quiz-container" class="hidden">
+      <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+      <div class="progress">
+        <p id="progress-counter">Question 1/20</p>
+      </div>
+      <p class="question"></p>
+      <div class="options"></div>
+      <p class="feedback"></p>
+      <p class="explanation" style="display: none;"></p>
+      <button id="next-btn" style="display: none;">Suivant</button>
+    </div>
+
+    <!-- Message final -->
+    <div id="final-message" class="hidden">
+      <h2 id="score-message"></h2>
+      <p id="final-score"></p>
+      <button id="retry-btn">Rejouer</button>
+      <button id="restart-btn">Recommencer</button>
+    </div>
+
+    <!-- Classement -->
+    <div class="scoreboard">
+      <h2>Classement des Performances</h2>
+      <ul id="leaderboard"></ul>
+      <button id="reset-leaderboard-btn">Réinitialiser le Classement</button>
+    </div>
+  </div>
+  <script src="app.js" defer></script>
+</body>
+</html>
